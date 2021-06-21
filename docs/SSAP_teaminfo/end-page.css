@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     background-color: #326148;
     align-items: center;
     font-family: 'Gothic A1', sans-serif;
@@ -40,10 +40,16 @@ a {
     display: flex;
     flex-direction: column;
 }
-.firstmenuline, .thirdmenuline {
+.secondmenuline, .thirdmenuline {
     border-style: solid;
     border-width: 1px;
     border-color: #326148;
+    z-index: 99;
+}
+.firstmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     z-index: 99;
 }
 .secondmenutext:hover > .secondmenuline {
@@ -52,13 +58,7 @@ a {
     border-color: white;
     z-index: 99;
 }
-.firstmenutext:hover > .firstmenuline {
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    z-index: 99;
-}
-.thirdmenuline {
+.thirdmenutext:hover > .thirdmenuline {
     border-style: solid;
     border-width: 1px;
     border-color: white;
@@ -130,6 +130,137 @@ a {
 .secondservemenu:hover > a{
     color: #326148;
 }
+.clickmenu {
+    display: none;
+}
+.newmenu {
+    display: none;
+}
+.newfirstmenuline, .newsecondmenuline, .newthirdmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #326148;
+    z-index: 99;
+}
+.newfirstmenutext:hover > .newfirstmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
+.newsecondmenutext:hover > .newsecondmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
+.newthirdmenutext:hover > .newthirdmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
+.smallbackground {
+    z-index: -2;
+    position: absolute;
+    left: 236px;
+    background-color: #EBE8E3;
+    width: 100%;
+    max-width: 960px;
+    height: 1570px;
+}
+.text {
+    z-index: -1;
+    margin-top: 150px;
+    margin-left: 50px;
+    font-family: 'Gothic A1', sans-serif;
+}
+.bigtext {
+    font-size: 25pt;
+    font-weight: bold;
+    color: black;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+.smalltext {
+    font-size: 14pt;
+    color: gray;
+}
+.motionbox {
+    z-index: 0;
+    position: absolute;
+    left: 0px;
+    top: 521px;
+    width: 1000px;
+    height: 300px;
+    background-color: black;
+    opacity: 50%;
+}
+.SSAP {
+    z-index: 0;
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+    width: 440px;
+    height: 250px;
+    background-color: #326148;
+    opacity: 50%;
+}
+.motionbox1 {
+    z-index: 0;
+    position: absolute;
+    top: 1070px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    opacity: 50%;
+}
+.firstcircle {
+    position: absolute;
+    left: 360px;
+    top: 1100px;
+    width: 230px;
+    height: 230px;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondcircle {
+    position: absolute;
+    left: 600px;
+    top: 1100px;
+    width: 230px;
+    height: 230px;
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 77px;
+}
+.firsttext {
+    position: absolute;
+    top: 1230px;
+    left: 110px;
+    z-index: 1;
+    font-family: 'Gothic A1', sans-serif;
+    display: none;
+}
+.secondtext {
+    position: absolute;
+    top: 1230px;
+    left: 640px;
+    font-family: 'Gothic A1', sans-serif;
+    display: none;
+}
 
 
 
@@ -174,13 +305,6 @@ body {
                 height: 100vh;
             }
 
-            .midGreen {
-                width: 100%;
-                max-width: 60rem;
-                background-color: #7B937F;
-                height: 100vh;
-            }
-
                 .realSpaceTaken {
                     width: 100%;
                     height: calc(100vh - 73px);
@@ -214,7 +338,6 @@ body {
     margin-top: 1.875rem;
 }
 
-
 /* page 2 */
 .page2Box {
     width: 100%;
@@ -243,6 +366,84 @@ body {
             /* height: 250px; */
             height: 15rem;
         }
+
+
+@media(max-width: 960px) {
+    .headermenu {
+        display: none;
+    }
+    .clickmenu {
+        display: block;
+        color: white;
+        font-size: 25px;
+        margin-right: 20px;
+        margin-left: auto;
+    }
+    .newmenu {
+        position: relative;
+        top: 80px;
+        background-color: #326148;
+        color: white;
+        font-family: 'Gothic A1', sans-serif;
+        width: 100%;
+        height: 200px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .smallbackground {
+        z-index: -2;
+        position: absolute;
+        left: 0px;
+        background-color: #EBE8E3;
+        width: 100%;
+        height: 2750px;
+    }
+    .text {
+        margin-top: 200px;
+        margin-left: 5px;
+        text-align: center;
+    }
+    .motionbox {
+        width: 100%;
+        top: 670px;
+    }
+    .SSAP {
+        top: 970px;
+        left: 162px;
+    }
+    .motionbox1 {
+        width: 100%;
+        top: 2450px;
+    }
+    .firstcircle {
+        top: 1400px;
+        left: 50px;
+    }
+    .firsttext {
+        top: 1530px;
+    }
+    .secondcircle {
+        position: absolute;
+        top: 1950px;
+        left: -30px;
+    }
+    .secondtext {
+        position: absolute;
+        top: 2080px;
+        left: 116px;
+    }
+}
+.hidden {
+    display: flex;
+}
+.go {
+    transform: translate(0px, -150px);
+}
+.see {
+    display: block;
+}
 
 @media (max-width: 839px) {
     .container {
@@ -284,15 +485,19 @@ body {
 @media (max-width: 425px) {
     .container {
         scroll-snap-type: none;
-        width: fit-content;
+        width: 100%;
         height: fit-content;
         justify-content: center;
         overflow-x: hidden;
     }
 
+    .page2Box {
+        grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+    }
+
     .personalPhoto {
         /* width: 320px; */
-        width: 18rem;
+        width: 80%;
         /* height: 190px; */
         height: 11.875rem;
     }
@@ -304,5 +509,8 @@ body {
     .page2 {
         /* height: 1000px; */
         height: 62.5rem;
+    }
+    .mid {
+        justify-content: center;
     }
 }

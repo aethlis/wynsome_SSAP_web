@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: #F6F3ED;
 }
 .header {
     z-index: 99;
@@ -132,6 +131,36 @@ a {
 .secondservemenu:hover > a{
     color: #326148;
 }
+.clickmenu {
+    display: none;
+}
+.newmenu {
+    display: none;
+}
+.newfirstmenuline, .newsecondmenuline, .newthirdmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #326148;
+    z-index: 99;
+}
+.newfirstmenutext:hover > .newfirstmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
+.newsecondmenutext:hover > .newsecondmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
+.newthirdmenutext:hover > .newthirdmenuline {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    z-index: 99;
+}
 .smallbackground {
     z-index: -2;
     position: absolute;
@@ -162,7 +191,7 @@ a {
     z-index: 0;
     position: absolute;
     left: 0px;
-    margin-top: 521px;
+    top: 521px;
     width: 1000px;
     height: 300px;
     background-color: black;
@@ -171,31 +200,26 @@ a {
 .SSAP {
     z-index: 0;
     position: absolute;
-    margin-top: 600px;
-    margin-left: 1000px;
+    top: 600px;
+    left: 1000px;
     width: 440px;
     height: 250px;
-    background-image: url(../KakaoTalk_Photo_2021-06-16-22-04-36.png);
+    background-color: #326148;
+    opacity: 50%;
 }
 .motionbox1 {
     z-index: 0;
     position: absolute;
     top: 1070px;
-    left: 0px;
     width: 500px;
     height: 500px;
     background-color: black;
     opacity: 50%;
 }
-.circle {
-    display: flex;
-    flex-direction: row;
+.firstcircle {
     position: absolute;
     left: 360px;
     top: 1100px;
-    margin-bottom: 30px;
-}
-.firstcircle {
     width: 230px;
     height: 230px;
     border-style: solid;
@@ -208,6 +232,9 @@ a {
     justify-content: center;
 }
 .secondcircle {
+    position: absolute;
+    left: 600px;
+    top: 1100px;
     width: 230px;
     height: 230px;
     border-style: solid;
@@ -220,21 +247,86 @@ a {
     justify-content: center;
     margin-left: 77px;
 }
-.circleundertext {
-    z-index: 1;
-    display: flex;
+.firsttext {
     position: absolute;
-    top: 1250px;
-    flex-direction: row;
+    top: 1230px;
+    left: 110px;
+    z-index: 1;
     font-family: 'Gothic A1', sans-serif;
-}
-.firstcircleundertext {
-    margin-left: 45px;
     display: none;
 }
-.secondcircleundertext {
-    margin-left: 125px;
+.secondtext {
+    position: absolute;
+    top: 1230px;
+    left: 640px;
+    font-family: 'Gothic A1', sans-serif;
     display: none;
+}
+@media(max-width: 960px) {
+    .headermenu {
+        display: none;
+    }
+    .clickmenu {
+        display: block;
+        color: white;
+        font-size: 25px;
+        margin-left: 240px;
+    }
+    .newmenu {
+        position: relative;
+        top: 80px;
+        background-color: #326148;
+        color: white;
+        font-family: 'Gothic A1', sans-serif;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .smallbackground {
+        z-index: -2;
+        position: absolute;
+        left: 0px;
+        background-color: #EBE8E3;
+        width: 100%;
+        height: 2750px;
+    }
+    .text {
+        margin-top: 200px;
+        margin-left: 5px;
+        text-align: center;
+    }
+    .motionbox {
+        width: 100%;
+        top: 670px;
+    }
+    .SSAP {
+        top: 970px;
+        left: 162px;
+    }
+    .motionbox1 {
+        width: 100%;
+        top: 2450px;
+    }
+    .firstcircle {
+        top: 1400px;
+        left: 50px;
+    }
+    .firsttext {
+        top: 1530px;
+    }
+    .secondcircle {
+        position: absolute;
+        top: 1950px;
+        left: -30px;
+    }
+    .secondtext {
+        position: absolute;
+        top: 2080px;
+        left: 116px;
+    }
 }
 .hidden {
     display: none;

@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="./SSAP.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-    <script type="text/javascript" src="./SSAP.js"></script>
-
     <div class="header">
         <div class="teamlogo">
             <a href="../index.html">팀 로고</a>
@@ -19,11 +18,15 @@
         <div class="headermenu">
             <div class="firstmenu">
                 <div class="firstmenutext">
-                    <a href="./SSAP.html">SSAP</a>
+                    <a href="">SSAP</a>
                     <div class="firstmenuline"></div>
                 </div>
             </div>
             <div class="secondmenu">
+                <div class="secondmenutext">
+                    <a href="">SSAP 결과물</a>
+                    <div class="secondmenuline"></div>
+                </div>
                 <div class="servemenu">
                     <div class="blankdiv"></div>
                     <div class="servemenu-content">
@@ -35,17 +38,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="secondmenutext">
-                    <a href="">SSAP 결과물</a>
-                    <div class="secondmenuline"></div>
-                </div>
             </div>
             <div class="thirdmenu">
                 <div class="thirdmenutext">
                     <a href="../SSAP_teaminfo/end-page.html">팀소개</a>
                     <div class="thirdmenuline"></div>
                 </div>
-            </div>       
+            </div>
+        </div>
+        
+        <div class="clickmenu" id="toggle-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <div class="newmenu">
+        <div class="newfirstmenu">
+            <div class="newfirstmenutext">
+                <a href="../SSAP/SSAP.html">SSAP</a>
+                <div class="newfirstmenuline"></div>
+            </div>
+        </div>
+        <div class="newsecondmenu">
+            <div class="newsecondmenutext">
+                <a href="">SSAP 결과물</a>
+                <div class="newsecondmenuline"></div>
+            </div>
+        </div>
+        <div class="newthirdmenu">
+            <div class="newthirdmenutext">
+                <a href="../SSAP_teaminfo/end-page.html">팀소개</a>
+                <div class="newthirdmenuline"></div>
+            </div>
         </div>
     </div>
 
@@ -73,16 +97,11 @@
         </div>
 
         <div class="secondpage">
-            <div class="circle">
+            <div class="firstcircletext">
                 <div class="firstcircle" onclick="move()">
                     눌러보세요
                 </div>
-                <div class="secondcircle" onclick="move1()">
-                    눌러보세요
-                </div>
-            </div>
-            <div class="circleundertext">
-                <div class="firstcircleundertext">
+                <div class="firsttext">
                     한국 폐기물 협회에 따르면 2019년 한 해동안 버려진 재활용 폐기물은 
                     <br>
                     430,345톤이다. 그 재활용 폐기물들 중, 잔재 폐기물로 처리되는 
@@ -102,7 +121,13 @@
                     <br>
                     쓰레기의 부피를 줄일 수 있는 압축기를 제작하였다.
                 </div>
-                <div class="secondcircleundertext">
+            </div>
+
+            <div class="secondcircletext">
+                <div class="secondcircle" onclick="move1()">
+                    눌러보세요
+                </div>
+                <div class="secondtext">
                     세척기 : 세척했을 때 이물질이 쉽게 제거되는 
                     <br>
                     재활용품을 고려해 캔과 페트병으로 대상 선정
@@ -115,5 +140,7 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="./SSAP.js"></script>
 </body>
 </html>
